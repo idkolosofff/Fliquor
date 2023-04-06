@@ -31,7 +31,7 @@ CREATE TABLE Tags (
 CREATE TABLE Likes (
   ID SERIAL PRIMARY KEY,
   UserID INT NOT NULL REFERENCES Users(ID),
-  PhotoID INT NOT NULL REFERENCES Photos(ID),
+  PhotoID INT NOT NULL REFERENCES Photos(ID)
 );
 
 -- Create the Comments table --
@@ -88,8 +88,8 @@ CREATE TABLE TaggedPhotos (
 -- Create the AlbumPhotos table --
 CREATE TABLE AlbumPhotos (
   ID SERIAL PRIMARY KEY,
-  PhotoID INT NOT NULL REFERENCES Photos(ID)
-  AlbumID INT NOT NULL REFERENCES Albums(ID),
+  PhotoID INT NOT NULL REFERENCES Photos(ID),
+  AlbumID INT NOT NULL REFERENCES Albums(ID)
 );
 
 -- Create the UserHistory table --
