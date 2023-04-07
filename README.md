@@ -1,2 +1,2 @@
 # Fliquor
- Photo Social Network Database
+ Photo Social Network Database, inspired by Flickr.com
