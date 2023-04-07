@@ -97,7 +97,7 @@ CREATE TABLE flq.UserHistory (
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL REFERENCES flq.User(id),
   name VARCHAR(100) NOT NULL,
-  email VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
   password VARCHAR(255) NOT NULL,
   start_date TIMESTAMP NOT NULL,
   end_date TIMESTAMP
