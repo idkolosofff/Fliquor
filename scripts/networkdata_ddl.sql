@@ -3,7 +3,6 @@ CREATE SCHEMA flq;
 -- Create the User table --
 CREATE TABLE flq.User (
   id SERIAL PRIMARY KEY,
-  profile_photo_id INT REFERENCES flq.Photo(id),
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
   password VARCHAR(255) NOT NULL,
